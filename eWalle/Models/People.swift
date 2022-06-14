@@ -7,9 +7,9 @@
 
 import Foundation
 struct People: Codable, PeopleCellViewModel {
-  let id: Int
-  let name: String
-  let email: String
-  let profileImage: String
-  let location: String
+    let id: Int
+    let name: String
+    let email: String
+    let profileImage: String
+    let location: String
 }

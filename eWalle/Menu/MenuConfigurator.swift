@@ -8,14 +8,14 @@
 import Foundation
 
 protocol MenuConfiguratorProtocol: AnyObject {
-  func configure(with viewController: MenuViewController)
-
+    func configure(with viewController: MenuViewController)
+    
 }
 
 class MenuConfigurator: MenuConfiguratorProtocol {
-  func configure(with viewController: MenuViewController) {
-    let presenter = MenuViewPresenter(view: viewController)
-    viewController.presenter = presenter
-
-  }
+    func configure(with viewController: MenuViewController) {
+        let presenter = MenuViewPresenter(view: viewController)
+        viewController.presenter = presenter
+        
+    }
 }

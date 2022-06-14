@@ -36,9 +36,9 @@ class ContainerViewController: UIViewController, HomeViewControllerDelegate {
     }
   }
 
+//MARK: - Меню открыть/закрыть
   func showMenuViewController(shouldMove: Bool) {
     if shouldMove {
-      // показываем menu
       UIView.animate(withDuration: 0.5,
                      delay: 0,
                      usingSpringWithDamping: 0.8,
@@ -53,11 +53,11 @@ class ContainerViewController: UIViewController, HomeViewControllerDelegate {
                       self.controller.view.layer.cornerRadius = 30
                       self.controller.view.isUserInteractionEnabled = false
 
-                     }) { (finished) in
+                     }) { (open) in
 
       }
     } else {
-      // убираем menu
+
       UIView.animate(withDuration: 0.5,
                      delay: 0,
                      usingSpringWithDamping: 0.8,
@@ -71,7 +71,7 @@ class ContainerViewController: UIViewController, HomeViewControllerDelegate {
                       self.controller.view.transform = t
                       self.controller.view.layer.cornerRadius = 0
                       self.controller.view.isUserInteractionEnabled = true
-                     }) { (finished) in
+                     }) { (close) in
 
       }
     }

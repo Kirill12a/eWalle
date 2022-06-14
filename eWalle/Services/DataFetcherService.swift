@@ -9,15 +9,15 @@ import Foundation
 
 class DataFetcherService {
 
-  var dataFetcher: DataFetcher
+    var dataFetcher: DataFetcher
 
-  init(dataFetcher: DataFetcher = LocalDataFetcher()) {
-    self.dataFetcher = dataFetcher
-  }
+    init(dataFetcher: DataFetcher = LocalDataFetcher()) {
+        self.dataFetcher = dataFetcher
+    }
+    
 
-
-  func fetchPeoples(completion: @escaping ([People]?) -> Void) {
-    let localUrlString = "JSONPeoples.json"
-    dataFetcher.fetchGenericJSONData(urlString: localUrlString, response: completion)
-  }
+    func fetchPeoples(completion: @escaping ([People]?) -> Void) {
+        let localUrlString = "JSONPeoples.json"
+        dataFetcher.fetchGenericJSONData(urlString: localUrlString, response: completion)
+    }
 }

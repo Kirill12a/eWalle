@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol HomeConfiguratorProtocol: class {
+protocol HomeConfiguratorProtocol: AnyObject {
   func configure(with viewController: HomeViewController)
 
 }

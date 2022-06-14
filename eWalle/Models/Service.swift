@@ -7,6 +7,6 @@
 
 import Foundation
 struct Service {
-  let serviceName: String
-  let serviceIcon: String
+    let serviceName: String
+    let serviceIcon: String
 }

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol MenuViewDelegate: class {
+protocol MenuViewDelegate: AnyObject {
   func switchMenuButton(to nameMenuButton: String)
 }
 
@@ -46,8 +46,8 @@ class MenuView: UIView {
         selectedIndex = buttonIndex
         delegate?.switchMenuButton(to: btn.titleLabel?.text ?? "")
         UIView.animate(withDuration: 0.3) {
-          self.selectorView.frame.origin.y = selectorPosition + 8.5
-          self.selectorView.frame.origin.x = -30
+//          self.selectorView.frame.origin.y = selectorPosition + 8.5
+//          self.selectorView.frame.origin.x = -30
         }
         btn.setTitleColor(textColor, for: .normal)
         btn.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 16)

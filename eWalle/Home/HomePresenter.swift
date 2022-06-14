@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import SwiftUI
 
-protocol HomeViewPresenterProtocol: class {
+protocol HomeViewPresenterProtocol: AnyObject {
   var peoples: [People] { get }
   var services: [Service] { get }
   var peoplesCount: Int? { get }
@@ -33,15 +32,12 @@ class HomePresenter {
   weak var view: HomeViewProtocol!
   let dataFetcher = DataFetcherService()
 
-
   var servicesDictionary = [String : String]()
-
 
   init(view: HomeViewProtocol) {
     self.view = view
   }
 }
-
 
 extension HomePresenter: HomeViewPresenterProtocol {
   func menuPressed() {

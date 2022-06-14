@@ -28,6 +28,7 @@ extension MenuViewController {
     let logoutImage = UIImage(named: "Logout")
     let logoutImageView = UIImageView(image: logoutImage ?? UIImage())
 
+    logoutImageView.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(logoutImageView)
 
     var bottomAnchorConstant: CGFloat = -107
@@ -35,12 +36,15 @@ extension MenuViewController {
       bottomAnchorConstant = -50
     }
 
-    logoutImageView.translatesAutoresizingMaskIntoConstraints = false
-    logoutImageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30).isActive = true
-    logoutImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomAnchorConstant).isActive = true
-    logoutImageView.widthAnchor.constraint(equalToConstant: 16).isActive = true
-    logoutImageView.heightAnchor.constraint(equalToConstant: 18).isActive = true
+
+      NSLayoutConstraint.activate([
+        logoutImageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
+        logoutImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomAnchorConstant),
+        logoutImageView.widthAnchor.constraint(equalToConstant: 16),
+        logoutImageView.heightAnchor.constraint(equalToConstant: 18)
+      ])
   }
+
 
   private func configureLogoutButton() {
     let textColor: UIColor = UIColor(named: "Color#1B1D28") ?? .gray
@@ -50,6 +54,7 @@ extension MenuViewController {
     logoutButton.setTitleColor(textColor, for: .normal)
     logoutButton.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 16)
     logoutButton.addTarget(self, action:#selector(self.logoutAction(sender:)), for: .touchUpInside)
+    logoutButton.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(logoutButton)
 
     var bottomAnchorConstant: CGFloat = -104
@@ -57,11 +62,13 @@ extension MenuViewController {
       bottomAnchorConstant = -47
     }
 
-    logoutButton.translatesAutoresizingMaskIntoConstraints = false
-    logoutButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 54).isActive = true
-    logoutButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomAnchorConstant).isActive = true
-    logoutButton.widthAnchor.constraint(equalToConstant: 55).isActive = true
-    logoutButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
+      NSLayoutConstraint.activate([
+        logoutButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 54),
+        logoutButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomAnchorConstant),
+        logoutButton.widthAnchor.constraint(equalToConstant: 55),
+        logoutButton.heightAnchor.constraint(equalToConstant: 25)
+      ])
+
   }
 
   private func configureVersionLabel() {
@@ -69,13 +76,16 @@ extension MenuViewController {
     versionLabel.font = UIFont(name: "Apple SD Gothic Neo Regular", size: 10)
     versionLabel.text = "Version 2.0.1"
     versionLabel.textColor = #colorLiteral(red: 0.2274509804, green: 0.2588235294, blue: 0.462745098, alpha: 1)
+    versionLabel.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(versionLabel)
 
-    versionLabel.translatesAutoresizingMaskIntoConstraints = false
-    versionLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30).isActive = true
-    versionLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -27).isActive = true
-    versionLabel.widthAnchor.constraint(equalToConstant: 68).isActive = true
-    versionLabel.heightAnchor.constraint(equalToConstant: 15).isActive = true
+      NSLayoutConstraint.activate([
+        versionLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
+        versionLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -27),
+        versionLabel.widthAnchor.constraint(equalToConstant: 68),
+        versionLabel.heightAnchor.constraint(equalToConstant: 15)
+      ])
+
 
   }
 
@@ -83,12 +93,14 @@ extension MenuViewController {
     let cancelButton = UIButton()
     cancelButton.setImage(UIImage(named: "Cross"), for: .normal)
     cancelButton.addTarget(self, action:#selector(self.cancelAction(sender:)), for: .touchUpInside)
-    view.addSubview(cancelButton)
-
     cancelButton.translatesAutoresizingMaskIntoConstraints = false
-    cancelButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
-    cancelButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -28).isActive = true
-    cancelButton.widthAnchor.constraint(equalToConstant: 13).isActive = true
-    cancelButton.heightAnchor.constraint(equalToConstant: 13).isActive = true
+    view.addSubview(cancelButton)
+      NSLayoutConstraint.activate([
+        cancelButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 47),
+        cancelButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -28),
+        cancelButton.widthAnchor.constraint(equalToConstant: 23),
+        cancelButton.heightAnchor.constraint(equalToConstant: 23)
+      ])
+
   }
 }

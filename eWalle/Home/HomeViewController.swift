@@ -33,7 +33,6 @@ class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-
     configurator.configure(with: self)
     presenter.viewDidLoad()
 
