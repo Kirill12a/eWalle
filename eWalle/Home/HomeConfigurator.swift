@@ -8,14 +8,14 @@
 import Foundation
 
 protocol HomeConfiguratorProtocol: AnyObject {
-  func configure(with viewController: HomeViewController)
-
+    func configure(with viewController: HomeViewController)
+    
 }
 
 class HomeConfigurator: HomeConfiguratorProtocol {
-  func configure(with viewController: HomeViewController) {
-    let presenter = HomePresenter(view: viewController)
-    viewController.presenter = presenter
-
-  }
+    func configure(with viewController: HomeViewController) {
+        let presenter = HomePresenter(view: viewController)
+        viewController.presenter = presenter
+        
+    }
 }

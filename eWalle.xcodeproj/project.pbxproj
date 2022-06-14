@@ -108,8 +108,6 @@
 				D265D6E82859238100ED9AB3 /* Models */,
 				D265D6DD2859230300ED9AB3 /* Cells */,
 				D265D6DC285922E300ED9AB3 /* SupportingFIles */,
-				D265D6D12859224D00ED9AB3 /* Assets.xcassets */,
-				D265D714285925BF00ED9AB3 /* Main.storyboard */,
 				D265D6D62859224D00ED9AB3 /* Info.plist */,
 				D265D71728593B2D00ED9AB3 /* JSOND_DATA */,
 			);
@@ -119,8 +117,10 @@
 		D265D6DC285922E300ED9AB3 /* SupportingFIles */ = {
 			isa = PBXGroup;
 			children = (
+				D265D6D12859224D00ED9AB3 /* Assets.xcassets */,
 				D265D6C82859224C00ED9AB3 /* AppDelegate.swift */,
 				D265D6CA2859224C00ED9AB3 /* SceneDelegate.swift */,
+				D265D714285925BF00ED9AB3 /* Main.storyboard */,
 				D265D6D32859224D00ED9AB3 /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFIles;
