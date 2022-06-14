@@ -68,6 +68,7 @@
 		D265D7102859258000ED9AB3 /* LocalDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataFetcher.swift; sourceTree = "<group>"; };
 		D265D7122859258F00ED9AB3 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
 		D265D714285925BF00ED9AB3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D265D71628592D8400ED9AB3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 		D265D6BC2859224C00ED9AB3 = {
 			isa = PBXGroup;
 			children = (
+				D265D71628592D8400ED9AB3 /* README.md */,
 				D265D6C72859224C00ED9AB3 /* eWalle */,
 				D265D6C62859224C00ED9AB3 /* Products */,
 			);
